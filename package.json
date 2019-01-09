@@ -1,0 +1,34 @@
+{
+  "name": "page-hash",
+  "version": "1.0.0",
+  "description": "Generates hashes of online resources",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "API",
+    "hash",
+    "crypto",
+    "website",
+    "webpage",
+    "file",
+    "url",
+    "page"
+  ],
+  "author": "Muhammad Muzzammil",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadmuzzammil1998/Page-Hash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/muhammadmuzzammil1998/Page-Hash/issues"
+  },
+  "homepage": "https://github.com/muhammadmuzzammil1998/Page-Hash#readme"
+}
