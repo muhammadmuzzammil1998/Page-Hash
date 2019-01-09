@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="API, hash, crypto, website, webpage, file, url, page, pagehash" />
+  <meta name="description" content="A simple front-end interface to demonstrate the use of the Page Hash API" />
+  <meta name="copyright" content="Muhammad Muzzammil">
+  <meta name="author" content="Muhammad Muzzammil, email@muzzammil.xyz">
+  <meta name="theme-color" content="#320073">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <title>Page Hash</title>
+</head>
+
+<body>
+  <div id="website-wrapper">
+    <div id="content-wrapper">
+      <div id="website">
+        <h1 id="title">Page Hash</h1>
+        <p id="sub">Generates hashes of online resources</p>
+        <div id="form-wrapper">
+          <form id="form" method="get">
+            <label for="url">Enter URL</label><br>
+            <div id="input-wrapper">
+              <input type="url" name="url" id="url" required>
+              <input type="hidden" name="web">
+              <input type="submit" value="Hash it!">
+            </div>
+          </form>
+        </div>
+        <div id="json"></div>
+      </div>
+    </div>
+    <div id="footer-wrapper">
+      <div id="footer">
+        <div id="credit">
+          <p>Page Hash is a simple front-end interface to demonstrate the use of the <span link="//github.com/muhammadmuzzammil1998/Page-Hash">Page
+              Hash API</span> which generates hashes of web pages and other online resources which are publicly
+            accessible by an URL.</p>
+          <hr>
+          <div id="me">&lt;&gt; with &#x2764;&#xFE0F; by <span link="//muzzammil.xyz/ref=page_hash">Muhammad Muzzammil</span></div>
+        </div>
+        <div id="extra">
+          <div link="//github.com/muhammadmuzzammil1998/Page-Hash#page-hash">Docs</div>
+          <div link="//github.com/muhammadmuzzammil1998/Page-Hash">GitHub</div>
+        </div>
+      </div>
+      <div id="notice">
+        <p>&#x2696;&#xFE0F; Licensed under <span link="//github.com/muhammadmuzzammil1998/Page-Hash/blob/master/LICENSE">The
+            MIT License</span>.</p>
+        <p>&copy; 2019 Muhammad Muzzammil</p>
+      </div>
+    </div>
+</body>
+
+</html>
