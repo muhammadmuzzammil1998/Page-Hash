@@ -10,6 +10,13 @@ const PORT = 7800
 
 app.get('/', (req, res) => {
   url = req.query.url
+  web = typeof req.query.web !== 'undefined'
+  body = req.query.body || false
+  if (typeof url === 'undefined' || url == '') {
+    app.use(express.static('site/resources'))
+    res.sendFile(__dirname + '/site/index.html')
+    return
+  }
   res.set('Content-Type', 'application/json')
   starttime = +new Date()
   pagehash(url)
@@ -18,7 +25,7 @@ app.get('/', (req, res) => {
         load: +new Date() - starttime,
         ...result,
       }))
-      console.log("Crawled page", url, "at", +new Date())
+      console.log("Crawled page", url, "at", +new Date(), (web ? "from website" : ""))
     }, err => {
       res.send(json(err))
       console.log("Error occured for page", url, "\nDump:\n Timestamp:", +new Date(), "\n Queries:", req.query, "\n Error:", err)
