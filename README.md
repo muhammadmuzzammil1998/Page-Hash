@@ -1,4 +1,4 @@
-# Page Hash
+# Page Hash [![Build Status](https://travis-ci.com/muhammadmuzzammil1998/Page-Hash.svg?token=HfFvHNnzvYdmdyodsU3h&branch=master)](https://travis-ci.com/muhammadmuzzammil1998/Page-Hash)
 
 Page Hash API provides hashes of the given item which some URL points to in JSON object. An example is given below:
 
