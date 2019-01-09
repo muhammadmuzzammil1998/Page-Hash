@@ -11,7 +11,9 @@ $(document).ready(() => {
 
   $('form').submit(e => e.preventDefault())
 
-  $('[link]').click(() => window.open($(this).attr('link')))
+  $('[link]').click(function () {
+    window.open($(this).attr('link'))
+  })
 
   let button = $('input[type="submit"]')
 
