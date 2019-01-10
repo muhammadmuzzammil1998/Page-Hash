@@ -6,7 +6,7 @@ console.log("Running in", app.get('env'), "mode")
 
 let json = o => JSON.stringify(o, undefined, 2)
 
-const PORT = 7800
+const PORT = process.env.PORT || 80
 
 app.get('/', (req, res) => {
   url = req.query.url
