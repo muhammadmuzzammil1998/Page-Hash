@@ -23,6 +23,28 @@ Page Hash API provides hashes of the given item which some URL points to in JSON
 }
 ```
 
+## Contents
+
+- [Running a local version](#running-a-local-version)
+
+  - [Install dependencies](#install-dependencies)
+  - [Running](#run)
+
+- [Using in Node.js](#using-in-nodejs)
+
+- [Documentation](#documentation)
+
+  - [TL;DR](#tldr)
+  - [Calling the API](#calling-the-api)
+
+    - [Examples](#examples)
+
+  - [Error handling](#error-handling)
+
+    - [Error detection](#error-detection)
+
+- [Contributions](#contributions)
+
 ## Running a local version
 
 ### Install dependencies
@@ -79,7 +101,6 @@ The API will return a JSON object containing one of the keys as `hashes` which i
       "hash": "0e973b59f476007fd10f87f347c3956065516fc0"
     },
 ...
-
 ```
 
 Along with the hashes computed, the returned JSON also contains the URL for which the hash is computed in `url` and API load time in `load`.
@@ -91,7 +112,7 @@ Along with the hashes computed, the returned JSON also contains the URL for whic
 ...
 ```
 
-#### Example
+#### Examples
 
 -- using cURL
 
