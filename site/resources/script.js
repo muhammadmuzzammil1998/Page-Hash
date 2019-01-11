@@ -48,7 +48,7 @@ $(document).ready(() => {
           $('#hashes').append(el)
         })
         json = getHighlightedJSON(JSON.stringify(result, undefined, 2))
-        $('#json').append(`<pre>curl "${window.location.href}?url=${$("#url").val()}"\n${json}</pre>`)
+        $('#json').append(`<pre><span class="cmd">curl</span> "${window.location.href}?url=${$("#url").val()}"\n${json}</pre>`)
         reset()
       }
     })
