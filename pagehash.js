@@ -26,6 +26,7 @@ let hash = (data, algo) => crypto.createHash(algo).update(data).digest("hex")
  * A promise with hashes and error details as 
  * objects when resolves or gets rejected respectively.
  * 
+ * Full documentation: https://github.com/muhammadmuzzammil1998/Page-Hash#documentation
  */
 module.exports = async url => {
   return new Promise((resolve, reject) => {
