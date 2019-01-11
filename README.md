@@ -39,15 +39,29 @@ npm start
 
 This will start the app on port 7800\. If you'd like to change that, change `PORT` in `app.js`.
 
+## Using in Node.js
+
+### Install using npm
+
+```bash
+npm install page-hash --save
+```
+
 ## Documentation
 
 ### TL;DR
 
 - API endpoint: `pagehash.muzzammil.xyz/?url=%` where `%` = full URL of resource.
+- In Node.js, `pagehash(STRING)` takes URL as input and returns a `promise`.
 - Example: `curl "https://pagehash.muzzammil.xyz/?url=https://example.com"`
-- Error handling: `if(hashes == null) { alert("err"); }`
+- Error handling:
+
+  - In Node.js, handle `promise` rejection.
+  - For other stuff, `if(hashes == null) { alert("err"); }`
 
 ### Calling the API
+
+In Node.js, `pagehash(STRING)`'s `promise` returns result as an `object`.
 
 API endpoint: `pagehash.muzzammil.xyz/?url=%` where `%` = full URL of resource.
 
@@ -65,6 +79,7 @@ The API will return a JSON object containing one of the keys as `hashes` which i
       "hash": "0e973b59f476007fd10f87f347c3956065516fc0"
     },
 ...
+
 ```
 
 Along with the hashes computed, the returned JSON also contains the URL for which the hash is computed in `url` and API load time in `load`.
@@ -102,7 +117,33 @@ $ curl "https://pagehash.muzzammil.xyz/?url=https://example.com"
 }
 ```
 
+-- using Node.js
+
+```javascript
+const pagehash = require("page-hash")
+
+pagehash("https://example.com").then(result => {
+  console.log("Result\n", typeof result)
+}, error => {
+  console.log("Error\n", error)
+})
+```
+
+```bash
+Result
+ { url: 'https://example.com',
+  hashes:
+   [ { algo: 'sha256',
+       hash:
+        '3587cb776ce0e4e8237f215800b7dffba0f25865cb84550e87ea8bbac838c423' },
+     { algo: 'sha1',
+       hash: '0e973b59f476007fd10f87f347c3956065516fc0' },
+     { algo: 'md5', hash: '09b9c392dc1f6e914cea287cb6be34b0' } ] }
+```
+
 ### Error handling
+
+In Node.js, handle rejection for returned `promise` as shown in the example for Node.js.
 
 Like the hashes, error details are also given in JSON object which contains multiple ways to detect errors and what caused them. An example of error response may look like this:
 
