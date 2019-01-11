@@ -191,6 +191,9 @@ div#json {
 pre {
   padding: 30px;
   opacity: 0;
+  background: #272727;
+  color: white;
+  border-radius: 5px;
   animation: fade .5s forwards .5s;
 }
 
@@ -208,6 +211,10 @@ pre::before {
 
 .string {
   color: #ffb300;
+}
+
+.cmd {
+  color: #1cdf15;
 }
 
 @media only screen and (max-width: 1336px) {
