@@ -3,6 +3,30 @@ const crypto = require('crypto')
 
 let hash = (data, algo) => crypto.createHash(algo).update(data).digest("hex")
 
+/**
+ * Generates hashes of a resource from given URL.
+ * 
+ * Hashes generated:
+ *  - SHA256
+ *  - SHA1
+ *  - MD5
+ * 
+ * Example:
+ * 
+ *      pagehash("https://domain.tld/file.pdf").then(result => {
+ *        console.log("Result\n", result)
+ *      }, error => {
+ *        console.log("Error\n", error)
+ *      })
+ * 
+ * @param url
+ * URL of the resource (LIMIT: 10MB). Example: https://domain.tld/file.pdf
+ * 
+ * @returns
+ * A promise with hashes and error details as 
+ * objects when resolves or gets rejected respectively.
+ * 
+ */
 module.exports = async url => {
   return new Promise((resolve, reject) => {
     request({
