@@ -123,7 +123,7 @@ $ curl "https://pagehash.muzzammil.xyz/?url=https://example.com"
 const pagehash = require("page-hash")
 
 pagehash("https://example.com").then(result => {
-  console.log("Result\n", typeof result)
+  console.log("Result\n", result)
 }, error => {
   console.log("Error\n", error)
 })
