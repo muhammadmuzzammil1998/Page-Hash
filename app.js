@@ -30,6 +30,11 @@ console.log("Running in", app.get('env'), "mode")
 let json = o => JSON.stringify(o, undefined, 2)
 
 const PORT = process.env.PORT || 7800
+
+app.get('/favicon.ico', (_req, res) => {
+  res.sendFile(__dirname + "/site/resources/favicon.ico")
+})
+
 app.get('/', (req, res) => {
   url = req.query.url
   web = typeof req.query.web !== 'undefined'
