@@ -30,9 +30,6 @@ console.log("Running in", app.get('env'), "mode")
 let json = o => JSON.stringify(o, undefined, 2)
 
 const PORT = process.env.PORT || 7800
-
-app.use(express.static('site/resources'));
-
 app.get('/', (req, res) => {
   url = req.query.url
   web = typeof req.query.web !== 'undefined'
