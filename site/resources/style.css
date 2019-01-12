@@ -195,6 +195,7 @@ pre {
   color: white;
   border-radius: 5px;
   animation: fade .5s forwards .5s;
+  overflow-x: auto;
 }
 
 pre::before {
