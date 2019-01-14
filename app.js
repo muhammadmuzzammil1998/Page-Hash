@@ -44,6 +44,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/site/index.html')
     return
   }
+
   res.set('Content-Type', 'application/json')
   starttime = +new Date()
   pagehash(url)
