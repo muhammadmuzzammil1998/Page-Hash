@@ -52,6 +52,11 @@ let hash = (data, algo) => crypto.createHash(algo).update(data).digest("hex")
  * Full documentation: https://github.com/muhammadmuzzammil1998/Page-Hash#documentation
  */
 module.exports = async url => {
+  // Test if URL contains http, add if not.
+  if (!/^(f|ht)tps?:\/\//i.test(url)) {
+    url = "http://" + url;
+  }
+
   return new Promise((resolve, reject) => {
     request({
       url: url,
