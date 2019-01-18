@@ -41,16 +41,14 @@ $(document).ready(() => {
   let button = $('input[type="submit"]')
 
   button.click(() => {
-    // Test if URL contains http, add if not.
-    if (!/^(f|ht)tps?:\/\//i.test($('#url').val())) {
-      $('#url').val("http://" + $('#url').val());
-    }
-
     if (button.attr('value') != 'Hash it!') {
       return
     }
     if ($('#url').val() == '') {
       return
+    }
+    if (!/^(f|ht)tps?:\/\//i.test($('#url').val())) {
+      $('#url').val("http://" + $('#url').val());
     }
     button.attr('value', 'Hashing...')
     button.addClass('hashing')
