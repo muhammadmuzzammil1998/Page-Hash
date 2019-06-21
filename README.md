@@ -32,6 +32,8 @@ Page Hash API provides hashes of the given item which some URL points to in JSON
 
 - [Using in Node.js](#using-in-nodejs)
 
+- [Using in Golang](https://muzzammil.xyz/pagehashgo)
+
 - [Documentation](#documentation)
 
   - [TL;DR](#tldr)
