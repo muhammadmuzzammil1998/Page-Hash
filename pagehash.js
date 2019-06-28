@@ -60,7 +60,10 @@ module.exports = async url => {
   return new Promise((resolve, reject) => {
     request({
       url: url,
-      method: "HEAD"
+      method: "HEAD",
+      headers: {
+        "User-Agent": "Page-Hash/1.2 (hash-crawler; +https://pagehash.muzzammil.xyz)"
+      }
     }, (_error, res, _body) => {
       if (typeof res === "undefined") {
         return
